@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Simple Calculator</h2>
+
+<p>Please input two numbers:</p>
+
+<input id="numb1">
+<input id="numb2">
+
+<button type="button" onclick="add()">Add</button>
+<button type="button" onclick="subtract()">Subtract</button>
+<button type="button" onclick="multiply()">Multiply</button>
+<button type="button" onclick="divide()">Divide</button>
+
+<p>Result:<p>
+<p id="demo"></p>
+
+<script>
+
+function add() {
+  let a = Number(document.getElementById("numb1").value);
+  let b = Number(document.getElementById("numb2").value);
+  if (isNaN(a) || isNaN(b)) {
+    return (document.getElementById("demo").innerHTML = "Invalid input")
+  } else {
+    return (document.getElementById("demo").innerHTML = a+b + " (operation: addition)")
+  }}
+  
+function subtract() {
+  let a = Number(document.getElementById("numb1").value);
+  let b = Number(document.getElementById("numb2").value);
+  if (isNaN(a) || isNaN(b)) {
+    return (document.getElementById("demo").innerHTML = "Invalid input")
+  } else {
+    return (document.getElementById("demo").innerHTML = a-b + " (operation: subtraction)")
+  }}
+  
+function multiply() {
+  let a = Number(document.getElementById("numb1").value);
+  let b = Number(document.getElementById("numb2").value);
+  if (isNaN(a) || isNaN(b)) {
+    return (document.getElementById("demo").innerHTML = "Invalid input")
+  } else {
+    return (document.getElementById("demo").innerHTML = a*b + " (operation: multiplication)")
+  }}
+  
+function divide() {
+  let a = Number(document.getElementById("numb1").value);
+  let b = Number(document.getElementById("numb2").value);
+  if (isNaN(a) || isNaN(b)) {
+    return (document.getElementById("demo").innerHTML = "Invalid input")
+  } if (b === 0) {
+    return (document.getElementById("demo").innerHTML = "Undefined (operation: division)")
+  } else {
+    return (document.getElementById("demo").innerHTML = a/b + " (operation: division)")
+  }}
+  
+</script>
+
+</body>
+</html> 
